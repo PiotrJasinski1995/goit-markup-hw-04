@@ -8,8 +8,8 @@
   --color-accent: #e7e9fc;
   --color-light: #f4f4fd;
   --color-modal-overlay: #2e2f4266;
-  --color-hero-background: rgba(46, 47, 66, 0.698);
-  --color-white-background: #ffffff;
+  --color-hero-background: #2e2f42b2;
+  --color-white-background: #fff;
   --color-modal-background: #fcfcfc;
 
   --font-family-logo: "Raleway", sans-serif;
@@ -42,6 +42,7 @@
   --text-transform-item-role: capitalize;
 
   --list-item-gap: 24px;
+  --list-item-content-gap: 8px;
 }
 
 body {
@@ -106,6 +107,11 @@ a {
   padding-bottom: 120px;
 }
 
+.header {
+  border-bottom: 1px solid var(--color-accent);
+  padding: 24px 0;
+}
+
 .header > .header-wrapper {
   display: flex;
   align-items: center;
@@ -131,6 +137,10 @@ a {
   flex-wrap: wrap;
 }
 
+.header .logo > .studio-element {
+  color: var(--color-dark);
+}
+
 .strengths-section .strengths-list {
   display: flex;
   gap: var(--list-item-gap);
@@ -140,11 +150,27 @@ a {
 }
 
 .strengths-list > .strengths-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--list-item-content-gap);
   flex-basis: calc((100% - 3 * var(--list-item-gap)) / 4);
 }
 
-.strengths-list > .strengths-list-item .item-heading {
-  margin-bottom: 8px;
+.strengths-icon-wrapper {
+  width: 264px;
+  height: 112px;
+  background-color: var(--color-light);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.strengths-icon {
+  width: 64px;
+  height: 64px;
+  --color-main: var(--color-dark);
+  --color-accent: var(--color-primary-brand);
 }
 
 .work-section .work-list {
@@ -168,6 +194,9 @@ a {
 }
 
 .team-list > .team-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--list-item-content-gap);
   flex-basis: calc((100% - 3 * var(--list-item-gap)) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -176,11 +205,38 @@ a {
 }
 
 .team-list > .team-list-item .item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--list-item-content-gap);
   padding: 32px 16px;
 }
 
-.team-list > .team-list-item .item-content > .item-heading {
-  margin-bottom: 8px;
+.team-social-list {
+  display: flex;
+  gap: var(--list-item-gap);
+}
+
+.link.team-social-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-brand);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.link.team-social-link:hover,
+.link.team-social-link:focus,
+.link.team-social-link:active {
+  background-color: var(--color-pressed-state);
+}
+
+.team-social-icon {
+  width: 16px;
+  height: 16px;
+  --color-main: var(--color-light);
 }
 
 .portfolio-section .portfolio-filter-list {
@@ -339,14 +395,6 @@ a {
   letter-spacing: var(--letter-spacing-text);
 }
 
-.header .logo > .studio-element {
-  color: var(--color-dark);
-}
-
-.footer .logo > .studio-element {
-  color: var(--color-light);
-}
-
 .logo {
   font-family: var(--font-family-logo);
   font-size: var(--font-size-logo);
@@ -403,25 +451,65 @@ a {
   letter-spacing: var(--letter-spacing-text);
 }
 
-.team-list-item {
-  text-align: center;
-}
-
-.header {
-  border-bottom: 1px solid var(--color-accent);
-  padding: 24px 0;
-}
-
 .footer {
   background-color: var(--color-dark);
   padding: 100px 0;
 }
 
-.footer > .footer-wrapper > .footer-text {
-  color: var(--color-light);
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-wrapper .footer-text {
   font-size: var(--font-size-text);
   line-height: 1.5;
   letter-spacing: var(--letter-spacing-text);
-  max-width: 264px;
+}
+
+.footer-wrapper > .footer-brand-info {
+  margin-right: 120px;
+}
+
+.footer-wrapper > .footer-brand-info > .footer-text-brand-info {
+  color: var(--color-light);
+  width: 264px;
   margin-top: 16px;
+}
+
+.footer-wrapper .footer-text-title {
+  color: var(--color-white-background);
+  font-weight: var(--font-weight-item-heading);
+}
+
+.footer-wrapper > .footer-brand-info .logo > .studio-element {
+  color: var(--color-light);
+}
+
+.footer-social-list {
+  display: flex;
+  gap: var(--list-item-gap);
+  margin-top: 16px;
+}
+
+.link.footer-social-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-brand);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.link.footer-social-link:hover,
+.link.footer-social-link:focus,
+.link.footer-social-link:active {
+  background-color: var(--color-success);
+}
+
+.footer-social-icon {
+  width: 24px;
+  height: 24px;
+  --color-main: var(--color-light);
 }
