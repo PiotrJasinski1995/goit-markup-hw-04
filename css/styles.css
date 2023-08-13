@@ -164,11 +164,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.strengths-icon {
-  width: 64px;
-  height: 64px;
   --color-main: var(--color-dark);
   --color-accent: var(--color-primary-brand);
 }
@@ -225,6 +220,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  --color-main: var(--color-light);
 }
 
 .link.team-social-link:hover,
@@ -233,10 +229,28 @@ a {
   background-color: var(--color-pressed-state);
 }
 
-.team-social-icon {
-  width: 16px;
-  height: 16px;
-  --color-main: var(--color-light);
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--list-item-gap);
+}
+
+.link.customer-link {
+  display: flex;
+  width: 168px;
+  height: 88px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--color-subtle-text);
+  --color-main: var(--color-subtle-text);
+}
+
+.link.customer-link:hover,
+.link.customer-link:focus,
+.link.customer-link:active {
+  --color-main: var(--color-pressed-state);
+  border-color: var(--color-pressed-state);
 }
 
 .portfolio-section .portfolio-filter-list {
@@ -279,7 +293,8 @@ a {
 }
 
 .work-section .section-heading,
-.team-section .section-heading {
+.team-section .section-heading,
+.customers-section .section-heading {
   margin-bottom: 72px;
 }
 
@@ -500,16 +515,11 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  --color-main: var(--color-light);
 }
 
 .link.footer-social-link:hover,
 .link.footer-social-link:focus,
 .link.footer-social-link:active {
   background-color: var(--color-success);
-}
-
-.footer-social-icon {
-  width: 24px;
-  height: 24px;
-  --color-main: var(--color-light);
 }
