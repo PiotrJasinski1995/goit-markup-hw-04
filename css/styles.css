@@ -144,7 +144,7 @@ a {
 .strengths-section .strengths-list {
   display: flex;
   gap: var(--list-item-gap);
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -171,7 +171,7 @@ a {
 .work-section .work-list {
   display: flex;
   gap: var(--list-item-gap);
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -183,7 +183,7 @@ a {
 .team-section .team-list {
   display: flex;
   gap: var(--list-item-gap);
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -232,6 +232,7 @@ a {
 .customers-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--list-item-gap);
 }
 
@@ -265,7 +266,7 @@ a {
   display: flex;
   column-gap: var(--list-item-gap);
   row-gap: calc(2 * var(--list-item-gap));
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
